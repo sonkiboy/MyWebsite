@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  
+  <style>
+      html{
+          background-image:url("Images/Background.png");
+          font-family: Ms Gothic;
+          color: white;
+            
+      }
+      
+      a{
+        color: #d4b11d;
+    }
+      
+      #mainContainer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 5100px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+      }
+      
+      #footer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 110px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+          
+          
+      }
+      
+      .columnHalf {
+            float: left;
+            width: 40%;
+            padding: 10px;
+          
+      }
+      
+      .columnThird{
+          float: left;
+          width:30%;
+          padding: 12px;
+      }
+      
+
+      /* Clear floats after the columns */
+      .row:after {
+            content: "";
+            display: table;
+            clear: both;
+      }
+      
+      
+  
+  
+  
+  </style>
+    
+    <body>
+
+        <div id="mainContainer">
+            
+            <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+            
+            
+            
+            <p>
+                
+                
+                <a href="index.html"><img src="Images/HomeButton.png"></a>
+                <a href="games.html"><img src="Images/GamesButton.png"></a>
+                <a href="portolioMain.html"><img src="Images/PortfolioButton.png"></a>
+     
+            </p>
+            
+            <h1 style="text-align: center">Sewage Underpass</h1>
+            <img src="Images/Portfolio/SewageUnderpass/Fig1-1.png" width="775px"><br>
+            <br>Sewage Underpass is a team based, 2-6 player competitive deathmatch map made for Quake 1 Multiplayer. Like the name suggests, this map takes place in an underground sewage filtration facility. The entire area is filled with grime and mold, with various pieces of machinery and pipe work threaded all throughout the facility. Directly through the center of the map are two sewage channels flowing down towards the center of the map. This map focuses on quickly moving through the environment and quickly moving from hall to hall.<br>
+                    <br>
+                    Made by Harrison Kratz, <br>
+                    Engine used: TrenchBroom <br>
+            
+            
+            
+            
+            <h1 style="text-align: center">Initial Map Planning</h1>
+            <div class="row">
+            
+                <div class="columnHalf">
+                   
+                    When initially experimenting with creating a map, the two main concepts I wanted to implement were 1) having a good sense of verticality without compromising sightlines or giving the higher ground an automatic advantage. 2) I wanted to incorporate some sort of water feature, as I was inspired by replaying the first few levels of quake and seeing the use of water features being used as dividing lines between areas.<br><br>
+
+After I got the initial shape of the arena, I moved on to thinking about routes from the two team spawns. The easiest one was creating the path of least resistance to the battle arena. Ultimately this just took the form of a straight hallway from the spawn to the arena, it’s the quickest way to get there, but you are directly in the line of sight of anyone who might be waiting in the arena. To make sure this didn’t turn into spawn camping, there is a staircase that descends to the spawn area.<br><br>
+
+Next were the two upper paths, and this is where some of the more asymmetrical elements of this level come into play. Each spawn has an exit forward to the main path, but there is also an exit on the spawns right that leads up to the upper path right of the spawn. However, while this is a quick way to get to the upper platforms, there is a disadvantage to this.
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    This is a cohesive map of what the map looks like. It’s split into two, divided by the red line in the photo to show both the above path, and the under path in one map. Both sides are completely identical, so while it feels asymmetrical, it’s just mirrored over both axis.<br><br>
+                    <a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Initial-Map-Planning">Read More Here</a><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig1-2.png" width="400px">
+                    
+                    
+                </div>
+            
+            </div>
+            
+            <h1 style="text-align: center">Grey Box</h1>
+            
+            <div class="row">
+            
+                <div class="columnHalf" style="width: =50%">
+                    With the first in engine pass at designing a level, I knew I needed to expand the map beyond the initial sketch. I started by just blocking out what I already had sketched out, and already the openness of the map was starting to becoming a bit jarring. The large ceilings were making rooms and halls feel a lot more open than I initially anticipated. I tried experimenting around with changing the height and width of the halls, trying to get something that didn’t feel too big, nor too cramped. However I think the height really added a lot to the main arena on the main level.<br>
+                    <br>
+                    The open nature made the area more imposing to enter, but also allowed for a lot of combat opportunities between the levels of action. While currently I feel like the size is at a good place, navigation and cover in this area will be a large focus when playtesting.<br>
+                    <br>However, there were some areas that I felt could be expanded upon, and I wanted to add more areas for the players to explore. Some of my peers who reviewed the initial concept suggested having a hole under the bridge in the center arena where the water would be flowing towards. This creates a path to a new area in the map, adds more verticality, and makes sense within the narrative and aesthetics of the map as a whole.<br>
+                    <br>
+                    This new underground area is a lot more open, as I wanted this to be a very risky area to be in. Little cover and no way back up through the hole in the ceiling, which is where most people will be coming up from. However, this created the issue of getting back up? The first area I added to solve this was the ramped area shown below.<br>
+                    <br>
+                    
+                </div>
+                
+                <div class="columnHalf" style="">
+                
+                    <img src="Images/Portfolio/SewageUnderpass/Fig2-1.png" width="400px"><br><br><img src="Images/Portfolio/SewageUnderpass/Fig2-2.png" width="400px"><br><br><img src="Images/Portfolio/SewageUnderpass/Fig2-3.png" width="400px"><br>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=60IaZQPhsEU">Video Walkthrough of Block out: YouTube
+
+</a>
+                    
+                </div>
+            
+            
+            </div>
+            <p>
+                This area connects the underground room, to the upper path, exiting right next to the ramp leading to the spawn. While it takes a bit of time to get up, the gap in the center gives a quick way down at the risk of health. There are also two spawn points at the bottom and top to incentivize players to use it over the hole in the arena. However I didn’t like how much of a choke point this created, and how slow it felt. As a result I added teleporters that connected the underground back up to the main floor. While quicker they lead to very exposed areas on the main floor, right next to where the main path meets the side halls. I’m interested to see how players decide to navigate between the two areas now, and want that to be the main focus when playtesting next.
+            </p>
+            
+            
+            <h1 style="text-align: center">Iteration</h1>
+            
+            <div class="row">
+                
+                <div class="columnHalf">
+                    From my peer reviews and my own playtests one aspect of the map became clear; the bottom half of the map is boring! To break that down a bit more, there are a few reasons why I need to rework the underground. 1) there is no reason to go down there other than quickly getting out of the main arena above it and 2) it’s too open and doesn’t promote fighting in that area. I was worried about adding too much in the underground, as I was worried about balancing issues and didn’t want it to become too busy. Yet I decided to at least start experimenting and adding things, and pull back later after testing.<br>
+                    <br>
+                    Further Documentation:<br>
+                    <ul >
+                        
+                        <li><a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Map-Iteration-%231">Iteration #1</a></li>
+                        <li><a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Playtest-1">Playtest #1</a></li>
+                        <li><a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Playtest-2">Playtest #2</a></li>
+                        <li><a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Playtest-3">Playtest #3</a></li>
+                        
+                    </ul>
+                    <br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig3-3.png" width="300px">
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    <img src="Images/Portfolio/SewageUnderpass/Fig3-1.png" width="400px">
+                    <img src="Images/Portfolio/SewageUnderpass/Fig3-2.png" width="400px">
+                    
+                    
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    <h1 style="text-align: center">Texturing</h1>
+                    Going into designing the more aesthetics of the map and texturing, I wanted to take a lot of inspiration from concrete molding techniques and creating an environment that feels like it has a function within the world it in habits. I was able to get a good pallet of textures from just the base quake Wads and start to really experiment with what the environment will look like and overall tone.<br>
+                    <br>
+                    <a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Texturing">Read More</a>
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <h1 style="text-align: center">Lighting</h1>
+                    Lighting an environment within trench broom is a bit of a challenge due to the fact you have to compile the map every time you want to check it, so as a result I tried to be sparing with light within this map. Luckily the map suits the dim aesthetic as the whole map is supposed to take place underground.<br>
+                    <br>
+                    <a href="https://github.com/sonkiboy/SewageUnderpass/wiki/Lighting">Read More</a>
+                    
+                </div>
+                
+            </div>
+            
+            <h1 style="text-align: center">Final Result</h1>
+            <p style="text-align: center">
+                
+                The map has reached completion and is available on the <a href="https://github.com/sonkiboy/SewageUnderpass/releases/tag/Release">Release</a> section of the <a href="https://github.com/sonkiboy/SewageUnderpass/wiki">Github Wiki</a> page! I’ve included a variety of screenshots of the level from both the in-engine editor and the compiled map, as well as a short 4 minute walkthrough video of the map.
+                
+            </p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L3I1EQOg__M?si=A3FbtaikHnSdx6KO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <div class="row">
+                
+                <div class="columnHalf" style="width: 45%">
+                    
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-1.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-2.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-3.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-4.png" width="350px">
+                    
+                
+                </div>
+                <div class="columnHalf" style="width: 40%">
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-5.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-6.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-7.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/SewageUnderpass/Fig4-8.png" width="350px">
+                    
+                    
+                    
+                
+                </div>
+                
+                
+            </div>
+            
+            </div>
+        
+        <br>
+        <div id="footer">
+            
+            <p style="text-align: center">
+                        
+                        <a href="index.html">Home</a> | <a href="games.html">Games</a> | <a href="portolioMain.html">Portfolio</a> | <a href="#top">Top of Page</a>
+                        
+                    </p>
+            
+            <div style="margin-left: 150px">
+                <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+                <a href="https://bsky.app/profile/sonki-boy.bsky.social"><img src="Gifs/Buttons/BlueskyButton.gif"></a>
+                <a href="https://sonki-boy.itch.io/"><img src="Gifs/Buttons/itchButton.png"></a>
+                <a href="https://www.youtube.com/@Sonki"><img src="Gifs/Buttons/YoutubeButton.png"></a>
+                <a href="https://github.com/sonkiboy"><img src="Gifs/Buttons/GithubButton.png"></a>
+            </div>
+            
+            
+            
+            <p style="text-align: center">
+            
+             © 2025 Harrison Kratz. All rights reserved.
+                
+            </p>
+            
+        </div>
+        
+  </body>
+<html>

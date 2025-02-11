@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <style>
+      html{
+          background-image:url("Images/Background.png");
+          font-family: Ms Gothic;
+          color: white;
+            
+      }
+      
+      a{
+        color: #d4b11d;
+    }
+      
+      #mainContainer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 10000px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+      }
+      
+      #footer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 110px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+          
+          
+      }
+      
+      .columnHalf {
+            float: left;
+            width: 45%;
+            padding: 10px;
+          
+      }
+      
+      .columnThird{
+          float: left;
+          width:30%;
+          padding: 12px;
+      }
+      
+
+      /* Clear floats after the columns */
+      .row:after {
+            content: "";
+            display: table;
+            clear: both;
+      }
+      
+      
+  
+  
+  
+  </style>
+    
+    <body>
+
+        <div id="mainContainer">
+            
+            <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+            
+            <p>
+
+                <a href="index.html"><img src="Images/HomeButton.png"></a>
+                <a href="games.html"><img src="Images/GamesButton.png"></a>
+                <a href="portolioMain.html"><img src="Images/PortfolioButton.png"></a>
+     
+            </p>
+            
+            
+            <h1 style="text-align: center">Dungeon Mole Dev Logs</h1>
+            <p style="text-align: center">
+                This is a collection of my weekly development updates for <a href="DungeonMole.html">Dungeon Mole</a>. The game was developed as my Capstone project for Game Studio Production at Columbia College Chicago. I have been the main designer and programmer for this project so much of my tasks were related to creating and desinging gameplay elements along with communicating with a team of artists to create assets for the game. Each week we would post on a Microsoft Teams page what we were working on, and then a follow up before we met the next week. We are currently 15 weeks into production and expect to ship in May 2025. 
+            </p><br><br>
+            
+            <!-- Week 1 -->
+            <h2>Week 1 and Earlier: The Prototype</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Leading up to the first week of the semester, I created two rough prototypes of game ideas to choose between and pitch to the studio class. One of those two prototypes was a top-down 2D version of Dungeon Mole. The choice to do 2D was a safe bet, as if I wasn't able to get any 3D artists on the project, I could handle making the spirtes. It also would simplyfy the process of dealing with physics and quickly protyping visuals.<br>
+                    Once I pitched the project we had 3 artists; Evelyn a concept artist, Larry a 3D modeler, and Kyle a general artist. Oliver who was another programmer in the class also had an interest in the project, yet also still wanted to work on his own game idea. <br>
+                    As a result we had 2 teams formed, one for Dungeon Mole, and one for Olivers project "Arcana Forge". While Oliver and I mostly stuck to our own projects since we were the only programmers for each respective game, the three artists would bounce between projects as was needed. However, Oliver did come in to assist every now and then when I was dealing with things outside the class.
+                    
+                    
+                </div>
+                
+                
+                
+                <div class="columnHalf">
+                    
+                    <b>Initial Pitch:</b><br>
+                    You are a Gardening Mole seeking to protect his garden home from the underground insect threat. While you cannot attack on your own, you can plant defenses throughout the underground dungeon to defend and destroy enemy defenses. But be careful, the insects will make large pushes on the exit every so often, so make sure you head back to defend before the next wave arrives. Explore the dungeon to find many unique seeds, discover powerful plant combos, and defend the garden from insect annihilation! <br>
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/_2Icf1CH4K0?si=UbrrdDD0lrK5OT5N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 2 -->
+            <h2>Week 2: Transition Prototype to 3D</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Main focus for me is working on getting a new version of the prototype built in 3D. <br>
+                    Specific things I'm aiming to get working for this week:<br>
+                    Basic Test Room<br>
+                    Working Player controller<br>
+                    Getting Slingshot plant working <br>
+                    I'll be creating the repo and project file on Tuesday once I figure out what version of unity we should use. <br>
+                    <br>
+                    This is what I got so far in terms of the 3D prototype. Just have movement, basic camera, and the sling working in the 3D environment. Wanted to also get the root wall plants but had an idea to make them grow out and cover more ground so I'll need some more time to get that working
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/fM4zcQa4--k?si=LHQ2JCJVxexlnjzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 3 -->
+            <h2>Week 3: Basic Enemy AI</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Main focus is going to be getting basic enemy AI implemented and getting more familiar with using Navmesh. Currently having some good results so I’m also going to look into getting the blockade plants set up. I’m thinking instead of having the blockade plants only take up one unit, I want to have it grow and block up to 3 spaces, either randomly or chosen by the player<br><br>
+                    Heres the current state of the prototype, got the root wall plants working and reworked them so they can grow in the 4 cardinal directions like a snake. I also have enemy pathfinding and spawners working, will need to rework to stop spawning after they have enough enemy's on the field.  Next focus is probably going to be getting the planting working with some sort of UI element to select what seed to use
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/SHLQQVDc8lw?si=A2jCoczEb6Qq15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 4 -->
+            <h2>Week 4: Finish Prototype for first Milestone</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Get the prototype done! A lot of the content is in there but the big thing I want to focus on is getting the planting system working with a ui element to select what seed to plant. I got the ui working so now it’s going to be about defining which tiles are dirt tiles that can be planted on. Not sure exactly how I want to do that but I have some ideas regarding tile pallets  and colliders<br><br>
+                    This is the current state of the project. Got the planting system working but could use some refinement down the line when it comes to the tile selection system. Also not fully committed to using unity grid maps to place dirt, but is the best solution I have currently found
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/GVGuQzccuKE?si=EtqooOfjy4keGzeT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 5 -->
+            <h2>Week 5: Aiming Plants</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Create a component that can be added to a plant and the player to show where the player input it aiming. This component should be scalable and able to be put on any object so it doesn't need to be built for each and every plant. The component should also have different modes of aiming, like a line for the Sling shot, or tile aim for the planting and root walls.<br><br>
+                    Got aim working as a component we can add to stuff like plants to render an aim icon. Currently has two modes: Linear and Grid. Linear shoots a straight line from its origin in the given Aim direction, while grid highlights the grid tile at the aim position. It can pretty easily be added to plant scripts so this should be easy to add to stuff down  the line 
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/r_Xh9DeZbmI?si=juotrboiqK8WfKKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <p style="text-align: center">*Note: Weeks 6+7 I was busy working on Corner Store Lobotomy so no videos were made*</p>
+            
+            <!-- Week 6 -->
+            <h2>Week 6: Digging up Plants and Managing Seeds</h2>
+            <div class="row" >
+                
+                
+                    
+                    Main goal is to get digging working for the player so they can dig up plants that are in the game world and get their seed back. This will then be stored and managed in the inventory manager script to determine what players can plant
+                    
+                
+                
+                
+                
+            </div>
+            
+            <!-- Week 7 -->
+            <h2>Week 7: Enemy Wave System and Catching up on last weeks task</h2>
+            <div class="row" >
+                
+                
+                    
+                    Main focus of this week will be getting a enemy wave system in place so we can get one step closer to give the player a win condition. In each room there will be a set number of enemy spawners that will activate when the player gets a set distance into the level. Since the rooms will be made as predetermined individual prefabs we can place these triggers by hand with colliders instead of tracking time or player distance. Once all the spawners are taken care of then the door to the next room will open up. This will be different from the bosses which will be dealt with in a future week.<br>
+                    Due to scheduling issues outside of school, I was not able to complete last weeks task, so in addition to the wave system, I will be also implementing the inventory system and seed distribution. 
+                    
+                
+                
+                
+                
+            </div>
+            
+            <!-- Week 8 -->
+            <h2>Week 8: Designing Battle Economy / Adding in Fertilizer Powerup</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week I will be experimenting and starting to plan out a RTS style economy focused on the gameplay loop on a per-room basis. Last Friday we had a discussion with David about how the player gains power when fighting in a room, and how to encourage a more defensive play style. <br>
+                    <br>
+                    Current Idea:<br>
+                    In each room there will be mineral deposits scattered around the room, these can be mined to gather a fertilizer that can be spent to power up the plants you have out on the field. These deposits can be chipped away at, rather than mined all at once. As the player chisels at it, pieces will break off that the player can pick up, but over time the deposit will shrink and eventually run out, forcing the player to look for other deposits. The fertilizer can be used on a "per-plant" basis, meaning that fertilizing a plant will only affect that single instance of that plant. For example, if I have two projectile plants and I fertilize one of them, that one will be powered up while the other projectile plant will not. Fertilized plants will have better stats, range, or even special abilities, and will remain powered up until they are dug up. The idea behind this is that the player will walk into a room, be drawn to the nearest mineral deposit, throw up some basic defenses, and start digging away at the deposit while fighting off the early weak waves of enemies. After they build up enough fertilizer from the deposit, they will start powering up their plants to make a push and attack the enemy spawners.<br>
+                    <br>
+                    This will take multiple weeks to fully execute, but this week will be mainly focused on adding the mineral mining mechanic, tracking how much the player has gathered, and giving the player the ability to use this on the plants (Plant evolutions will come later). 
+ 
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    Heres a video demoing the work I got in this week with some extra explanations, but in summary here's what I got:<br>
+                    <br>
+                    <ul>
+                        <li>Plants can now be dug up to get back their seed</li>
+                        <li>Item drops that the player can pick up when near</li>
+                        <li>Mineral deposits that the player can mine with their shovel to gain fertilizer, but will eventually run out </li>
+                        <li>Reworked inventory system to work off Scriptable Objects</li>
+                    </ul>
+                    <br>
+                    Next week will revolve around getting the plant power up system working where the player can use fertilizer to powerup their plants. Next play test will be focused on seeing if the players will actually build bases near the fertilizer deposits and how effective the loop of "Set up, mine, push/attack, repeat" really is
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/gGYG85kk0RI?si=I27pbNSBsLYNKzG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 9 -->
+            <h2>Week 9: Plant Upgrades w/ Fertilizer (Also UI updates)</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week is a continuation of last weeks task where I will be focusing on creating a system to fertilize plants and have them evolve. When the player evolves a plant it will gain stat increases and change visually. Like stated last time, evolving a plant will only change that instance of a plant, so it wont change any other plants of the same type, and when you dig up an evolved plant, replanting it will revert it back to its basic state.<br>
+                    
+                    I will also be adding in the new UI elements that Evelyn is making this week and making sure it updates as their values change (Health hearts decrease, item icons swap around, etc.)
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    Heres a little update video of how things are coming together, still got a lot of balancing and performance fixing since ive been seeing a lot of lag spikes? Anyways I should have everything ready on itch by tomorrow
+                    
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/fzvf8kVzF2M?si=_DqDO2Dyh1YRV6PZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 10 -->
+            <h2>Week 10: Fix and Iterate on major Play test finds</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    My goal for this week is to go back and fix as many of the issues found in this past weeks play test notes as possible.<br>
+                    Since I was not present for the play test on Friday I want to organize my own play test session next week where I can see first hand how players are interacting with the game world. I want to refine the current prototype just enough to the point where I can gather accurate data without bugs or performance issues being in the way.<br>
+                    <br>
+                    From my investigations on some of the bugs listed in the notes doc, we have some issues with how we are using the imported room model. First thing I noticed is that when we use the mesh collider, it sometimes auto generates in a way that literally cuts corners. I included a picture of how this shows up, with the dark blue lines outlining the mesh, while the red is the autogenerated collider based on the mesh. Along the same lines, I discovered the issue where the player clips through the floor on the sling is a result of the player clipping into the room collider and going right through due to the dirt areas having a slightly raised section with the dirt layered on top. This also interferes with the enemy AI as the nav mesh cant always navigate onto that<br><br>
+                    <!--Images Here-->
+                    
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-1.png" width="300px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-2.png" width="300px">
+                    
+                    <br><br>
+                    This is not on the fault of anyone, but I think we do need to change up our strategy to make sure we are in control of the colliders. Going forward the room mesh and the colliders of the room object should be separate objects that share a parent obj like the enemies and player objects. I know we haven't had a defined plan for level design and how that workflow will look like, but with some of the major features almost in place, I think we should start planning for that. For Friday I'm going to try and grey box a new smaller room that is designed with the newer mechanics in mind. From there I want to see how easy it would be to separate the grey box mesh from its colliders, see if we can export those meshes to Maya for Kyle and Larry to model over, then export that back into Unity. If everything works out we should be able to keep grey box collisions to use in the final room model to save on time, and keep the geometry simple and in our control.
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    Here is a grey box room I made with the new mechanics in mind. I wanted to play with the idea of having bridges being blocked off by the wall plants so you can control the pathing of enemies, and I like the idea but there isn't much of a way to take advantage of it other than just making the enemies take longer to get to you. I also tried thinking of where the players are going to be setting up base, which can depend on what path you take. One bridge is a bit harder to navigate sine it has less dirt space, but can flank two hives and put you right next to an ore deposit. I'll be interested to see how this works in play test, feel like it will point out a lot of holes in the design and give a good idea of where to go going forward<br><br>
+                    
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-3.png" width="330px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-4.png" width="330px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-5.png" width="330px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-6.png" width="330px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig10-7.png" width="330px">
+                </div>
+                
+            </div>
+            
+            <!-- Week 12 -->
+            <h2>Week 11: Simplify Inputs, Reactionary UI, and Tutorialization</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week I want to focus on getting a concrete idea of how I want to teach the mechanics of the game to player, reduce the amount of things the player has to do, and make it easier to quickly understand what each action does, and what interactions are occurring in the game. This all comes together under the task of tutorializing the game and thinking of what first time players are going to be thinking. I honestly doubt all of this will get done within the week, but I want to start thinking of how this is all going to come together and creating a plan since this will be put in peoples hands in a few weeks.
+                    <br><br>
+                     Heres my weekly demo video. Main things to take note are the Ui changes, the player aim reticle, and the input changes<br>
+                    <br>
+                    <b>UI Changes</b>
+                    <ul>
+                    <li>Selected items pops out when swapped too
+                        next and previous item slots are greyed out to be less noticeable and show they aren't immediately ready to use</li>
+                        <li>Fertilizer counter pops out when value changed</li>
+                    </ul>
+                    <br>
+                    <b>Aim Reticle</b>
+                    <ul>
+                        <li>A semi transparent arrow is now positioned infront of the player to show what they are aiming at and what action they are about to perform</li>
+                        <li>when an interactable object like a plant or mineral deposit is infront of the player, the reticle arrow will snap onto the top of that object based on its center</li>
+                    </ul>
+                    <br>
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                   
+                    
+                    <b>Input Changes</b>
+                    <ul>
+                        <li>All actions bound to either A or B on the controller (see main post for the positive and negative input explanation) and changes depending on what the player is or isn't selecting</li>
+                        <li>The dig action has been changed from an item to the B button option for any object that it is applicable too (ie. plants or minerals)</li>
+                        <li>Fertilize is still a seperate button however, and is bound to the trigger. This may change to be the A button action for the sprout stage of plants if the plant evolution method is changed or removed.</li>
+                    </ul>
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/_W2vm_QCvPQ?si=a1fdZPCK9fVP0BuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <p style="text-align: center">*Note: Here I mention the Columbia College Gala which was a showcase event held at the College that featured student work and Dungeon Mole was one of the works featured*</p>
+            
+            <!-- Week 12 -->
+            <h2>Week 12: Input Command UI and Highlight Reel</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Since it's the holiday this week this will be a bit more of a smaller week in terms of scale, but still a very important one! With the new inputs in place and the actions more finalized, I want to start adding a UI overlay that will give important info to the player depending on what they are doing <br>
+ 
+                    <ul>
+                        <li>Selecting an object will display the commands the player can make and their respective button</li>
+                        <li>Selecting a plant will show a dial that indicates how much fertilizer it needs until it evolves to the next stage </li>
+                        <li>When the player picks up an item, a sprite will pop up above the player that shows how much they have gained (+1)</li>
+                    </ul>
+                        
+                    This will help a lot with teaching the player how to play the game and not have to halt action to remember the controls. While this probably wont be an issue after the player has played for a while, it will help save time when playtesting and introducing the game to new comers. <br>
+                    
+                    I will also be working on a short 30 - 60 second long high light reel for the Columbia Gala, showing off the game and it's current state. Since the dead line on that is 12/1 I will be working on that first and thus will probably not include some of the features listed above. However the UI additions are not for visual aesthetic, rather more so just instruction for the actual Gala event so I'm not too worried.
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    Here is what I have for the highlight reel! Im also going to use this on our itch page for now as a small video trailer. No sound but might change that once we start to get stuff from the sound team<br><br><br>
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/QKbLFAEqHGI?si=gyYGOeU9CoOw4tVS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 13 -->
+            <h2>Week 13: Ready build for Gala (Tutorial Level + Visual Input Commands)</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week is going to be focused on getting a ready build for the Gala on Thursday! Main focus is finishing up this initial tutorialization phase of production by getting a tutorial room set up that will teach the player the basic mechanics of the game and getting the Ui Input command popups working.<br>
+                    <br>
+                    <b>Tutorial Room</b><br>
+                    This room will be where the player spawns in and learns the mechanics of the game. Basic progression is 1) Teaching the player how to dig fertilizer. 2) Teaching the player how to use fertilizer on sprouts to grow them. 3) Interacting with plants to attack targets. 4) Digging up plants and replanting them. 
+                    My goal is to use as little text as possible to communicate the mechanics, just visuals and level design.<br>
+                    <br>
+                    <b>Visual Input Commands</b><br>
+                    I've been wanting to get this working in the game for the past few weeks but have been a bit stuck in how to go about implementing it. Ideally I would like these UI elements to be entirely iconography rather than using text by having a symbol representing the action and the button it is tied too ( / ). Main issue is that getting all of those action visuals designed will take some time and I feel like using text would be the safer option for the Gala build. I will be creating an asset list for the artists soon so I will be including those icons to use down the line.<br><br>
+                    Here is the tutorial level for the gala demo I made, people seemed to like it and more people were able to get the hang of the mechanics and controls.<br><br>
+                    <img src="Images/Portfolio/DMDevLogs/Fig13-1.jpg" width="330px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig13-2.png" width="330px">
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    
+ 
+                    <b>Playtest Notes:</b>
+                    <ul>
+                        <li>Should probably teach players how to plant before showing them how to interact with them. Had a lot of points where players would walk up to the first plant and press B to dig up the plant, and then were confused on what to do next.  </li>
+                        <li>players were overwhelmed by the spike in difficulty once enemies are introduced, probably will make the first hive or two only spawn one enemy to help players adjust</li>
+                        <li>Second challenge with the hive was a bit hard to teach players, as the only solution was to plant a shooter and turn it in such a way to bounce off a slanted wall. Good puzzle, but probably not the second one to show the player</li>
+                    </ul>
+
+                        
+                    For the most part I feel good about the content that is in place. There are still some bugs to iron out but design wise seeing people who have never played video games before pick up the controls, mechanics, and gameplay loops was a relief. <br><br>
+                    
+                    <img src="Images/Portfolio/DMDevLogs/Fig13-3.png" width="350px">
+                    <img src="Images/Portfolio/DMDevLogs/Fig13-4.png" width="350px">
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 14 -->
+            <h2>Week 14: Final Polish and New Build</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Since the Gala was this past week, most if not all of the content I wanted to get for the final milestone for this semester is implemented, so this week is going to be going back through the demo scene, fix any bugs that will get in the way of the player learning the mechanics, change some things with the notes from the play test (See W13 Post), and get the final build onto Itch with a new dev log.  
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    Here is the <a href="https://sonki-boy.itch.io/dungeon-mole/devlog/850374/15-week-milestone-release">link</a> to the new Itch dev log with the newest release! I'm going to update the screenshots to show off the new scene and add the trailer but the new build is live! Thank you all who were involved in this project, very happy with where this is going and excited to see what next semester will bring!
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 15 -->
+            <h2>Week 15: Half Way Point Reflection</h2>
+            <div class="row" >
+                
+                Over all I am very proud with how this game has shaped and developed. It has been a rocky process and I had to wear many hats durring this first stretch of development, but I'm really excited for the future. Over the course of the past 15 weeks I feel like I have really been challenged to really develop my skills as a producer and project lead, while also testing my design prowes. <br><br>
+                This was my first time leading a team of this scale and having to figure out how to effectivley manage my time, and the time of my team mates. There were also a handful of disruptions this semester, like spending the most of weeks 6 and 7 working on Corner Store Lobotomy, attending MDEV on the day our second milestone was due, and basically having the third milestone done 2 weeks early to be ready for the Columbia Gala.<br><br>
+                I am very greatful for the team I got to work with on this process, everyone has put in a lot of work and has been amazing to work with. Our artists Evelyn, Kyle, and Larry have all really made this idea come to life and have really brought a lot of excitement to the project, and Oliver has been a great source of advice and has really helped me shape the design of this game.<br><br>
+                Speaking of which, this game has been a real design challenge when it came to figuring out the core gameplay and how to effectively teach players gameplay mechanics. A lot of the past 7 weeks have been devoted to this and thus is why there wasn't many new art assets. I had a lot of trouble figuring out how to define my basic core gameplay loop and identity of the game. Some of the original ideas were scrapped or put on hold like the floor timer and slingshot plant, but from that emerged a much stronger core system. Thats why I feel like the next 15 weeks of development are really going to be focused on expanding on this core gamplay and having a lot of fun making new plants, levels, enemies, and much more! We also have a sound team who will be working to get sound effects and music made for the game which is really exciting!<br><br>
+                To sum it all up, this has been a challenging stretch. But now I feel like the project is set up to really take off in this second half of development and a lot of the early design work is going to pay off.
+                
+            </div>
+            
+            
+            
+            
+            
+        </div>
+        
+        <br>
+        <div id="footer">
+            
+            <p style="text-align: center">
+                        
+                        <a href="index.html">Home</a> | <a href="games.html">Games</a> | <a href="portolioMain.html">Portfolio</a> | <a href="#top">Top of Page</a>
+                        
+                    </p>
+            
+            <div style="margin-left: 150px">
+                <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+                <a href="https://bsky.app/profile/sonki-boy.bsky.social"><img src="Gifs/Buttons/BlueskyButton.gif"></a>
+                <a href="https://sonki-boy.itch.io/"><img src="Gifs/Buttons/itchButton.png"></a>
+                <a href="https://www.youtube.com/@Sonki"><img src="Gifs/Buttons/YoutubeButton.png"></a>
+                <a href="https://github.com/sonkiboy"><img src="Gifs/Buttons/GithubButton.png"></a>
+            </div>
+            
+            
+            
+            <p style="text-align: center">
+            
+             © 2025 Harrison Kratz. All rights reserved.
+                
+            </p>
+            
+        </div>
+        
+    </body>
+<html>

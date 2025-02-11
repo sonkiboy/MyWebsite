@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+
+<style>
+      html{
+          background-image:url("Images/Background.png");
+          font-family: Ms Gothic;
+          color: white;
+            
+      }
+      
+      a{
+        color: #d4b11d;
+    }
+      
+      #mainContainer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 9000px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+      }
+      
+    #footer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 110px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+          
+          
+      }
+    
+      .columnHalf {
+            float: left;
+            width: 45%;
+            padding: 10px;
+          
+      }
+      
+      .columnThird{
+          float: left;
+          width:30%;
+          padding: 12px;
+      }
+      
+
+      /* Clear floats after the columns */
+      .row:after {
+            content: "";
+            display: table;
+            clear: both;
+      }
+      .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          margin-top: 15px;
+            width: ;
+        }
+      
+      
+  
+  
+  
+  </style>
+    
+    <body>
+
+        <div id="mainContainer">
+            
+            <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+            
+            
+            
+            <p>
+                
+                
+                <a href="index.html"><img src="Images/HomeButton.png"></a>
+                <a href="games.html"><img src="Images/GamesButton.png"></a>
+                <a href="portolioMain.html"><img src="Images/PortfolioButton.png"></a>
+     
+            </p>
+            
+            <h1 style="text-align: center">Game and Level Concept: Magnesis</h1>
+            <p style="text-align: center">
+                Magnesis is a game concept from 2023 for a 3D Puzzle Platformer built within Unreal Engine 5. The game revolves around the players ability to control metal in their environment, the power of Magnesis. This ability takes inspiration from The Legend of Zelda: Breath of the Wild’s ability of the same name, yet this concept adds more movement and physics based interactions that can be used to create a wider variety of puzzles. The following document goes into the pitch document for the proposed first level of the game which introduces the player to the magnesis ability.
+            </p>
+            
+            
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    <h2>Summary</h2>
+                    Level revolves around teaching the mechanic of Magnesis, the players ability to latch onto metal objects and either move them around if they are lighter than the player, or hook shot over to them and if they are heavier than the player, or locked in place. Goal of the level is to hit four yellow switches in 4 different puzzle rooms to activate the door to the next level. The main hub area connects the start, puzzle rooms, and the exit. Progression is indicated by the 4 lights positioned in the center of the main hub, once all are lit up, the central light will light up and the door to the goal tower will open.
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-1.png" width="400px">
+                    
+                </div>
+                
+                
+                
+            </div>
+            
+            <h2>Branching Paths</h2>
+            While the desired effect was to give the players the illusion that they can pick and choose where they can go, I still wanted to have them lean towards a certain order in which they explore each path. Each path will have a series of small challenges that ramp up in difficulty and will teach a player about a new mechanic and/or movement strategy. These are then reintroduced in the main hub to allow the player to use their new found knowledge to get to a new path. However, these hub challenges are not blocked off for any portion of the level, meaning that if a player already understands one of these mechanics or wants to try and learn with one of these harder challengers, they are more than welcomed to explore the paths out of order. This achieves the main idea of having a more open ended experience of having a player learn and explore at their own pace, while still having a clear way forward if the player gets stuck on a challenge. <br>
+            
+            <h2 style="text-align: center">Map Overview</h2>
+            
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-2.jpg" width="350px"><br><br>
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-4.png" width="350px"><br><br>
+                    <img src="Images/Portfolio/Magnesis/Fig1-5.png" width="350px">
+                    
+                </div> 
+                
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-3.png" width="350px">
+                    
+                    <h2>Main Hub</h2>
+                    <p>
+                        The main hub is the circular room at the center of the map. It serves as a junction between the start, the end, and all of the puzzle halls that the player must explore before completing the level. While the player is allowed to explore at their own pace, the challenges in each of the branching halls encourages a specific order in which to explore. Three out of four of the hall entrances have challenges that test the players skill on how to use the main mechanics of the game. These skills are taught in other rooms, however if the player understands the puzzles in the main hall, or if they want to try and learn the mechanics in a harder setting, they are more than welcomed to explore out of order. This philosophy is taken from many Metroid-vania style games where many blocked off paths are shown and not able to be passed until the player gains new knowledge or abilities. <br>
+The overall shape of the area has been inspired by Christopher Alexanders principle of Good Shape, having many natural occurring shapes joined together at a central point. From a birds eye view the hub takes on a leaf like shape, modeled after the growth shown in model B. The end goal is placed at the top of the hub and the small entrance at the bottom to mimic their respective importance in relation to progression.  
+                    </p>
+                    
+                    
+                </div>
+                
+            </div>
+            
+            <h2 style="text-align: center">Gameplay Elements</h2>
+            
+            <!--Mag Blocks-->
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-6.png" width="300px" ><img src="Images/Portfolio/Magnesis/Fig1-7.png" width="250px" >
+                    
+                </div>
+                <div class="columnHalf" style="margin-top: 100px">
+                    
+                    <h2>Magnetic Blocks</h2>
+                    <p>
+                        Magnetic blocks are objects that can be latched onto with the magnesis power. Blocks that are lighter than the player can be moved around, while blocks that are heaver allow the player to fly towards it and hold onto it. Some blocks are hollow and are lighter, and some can only be moved along a rail. All magnetic blocks have a red coloration.
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+            <!--Catapult-->
+            <div class="row">
+                <div class="columnHalf">
+                    
+                    <h2>Magnetic Catapult</h2>
+                    <p>
+                        These structures have a magnetic point at their top that can be latched onto with the magnesis power. These points will always draw the player to it and cannot be moved around. Unlike a magnetic block, catapult points do not have collision, allowing the player to be slung forward with the momentum from the launch.
+                    </p>
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-8.png" width="300px" >
+                    
+                </div>
+                
+                
+            </div>
+            
+            <!--Lights-->
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-9.png" width="150px" ><img src="Images/Portfolio/Magnesis/Fig1-10.png" width="150px" >
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    <h2>Lights and Switches</h2>
+                    <p>Switches are used to activate elements they are connected to. Lights are used to indicate the active state of a switch or an object</p>
+                    
+                </div>
+                
+            </div>
+            
+            <!--Spike-->
+            <div class="row">
+                <div class="columnHalf">
+                    
+                    <h2>Spikes</h2>
+                    <p>
+                        Hazards that poke out of a surface that cause damage to the player on impact.
+                    </p>
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-11.png" width="300px" >
+                    
+                </div>
+                
+                
+            </div>
+            
+            <!--Rail-->
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-12.png" width="300px" >
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    <h2>Object Rails</h2>
+                    <p>Object Rails are thin orange rails that have magnetic objects connected to them. The player can latch on to the magnetic block to move it around along the rail, but the object cannot be disconnected from the rail.</p>
+                    
+                </div>
+                
+            </div>
+            
+            <!--Strong Good and Deep-->
+            <div class="row">
+                
+                <div class="columnThird">
+                    
+                    <h2>Strong Center</h2>
+                    Similar to Good Shape, this area is designed to be a center that you come back to time and time again as you complete the trials in each branch. Within this center is another center that represents your progress. The raised platform in the center of the circular room has the 4 lights that indicate you progress within the level, and once all 4 are lit up, the large light in the center will then turn on and the path forward will open.
+                    
+                </div>
+                <div class="columnThird">
+                    
+                    <h2>Good Shape</h2>
+                    Like stated above, the new main hub was designed to have Christopher Alexanders principle of Good Shape in mind. The hub was designed to have a natural, leaf like shape in mind to not only facilitate the hub and spoke system branching from the center point, but to also give a more natural shape to the whole area. This is supposed to be a ruined temple overtaken by nature, so the area is designed to mimic shapes that naturally occur within nature.
+                    
+                </div>
+                <div class="columnThird">
+                    
+                    <h2>Deep Interlock</h2>
+                    All the branching paths connect back to the center, not only in a physical way, but in terms of the content, features and mechanics as well. Each path offers a look into a mechanic that is also present and expanded upon in the main central hub area as well. The goal is that by exploring the different paths, you will learn mechanics that will teach the player how to access the other paths back in the main hub.
+                    
+                </div>
+                
+            </div>
+            
+            <!--Enrich-->
+            <div class="row">
+                
+                <div class="columnHalf" style="width: 60%">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-13.png" width=450px; style="margin-top: 100px">
+                    
+                </div>
+                <div class="columnHalf" style="width: 30%">
+                    
+                    <h2>Enrichment within the Hub</h2>
+                    Within the main hub there are different objects the player can interact with and move around. These serve to be objects of experimentation to help the player better learn the mechanics and test out different ideas in a safe environment. The player is also able to use these items within the different challenges in the hub, some may be required and some may lead to unconventional problem solving. This is all to help encourage the player to think creatively with what is available to them and use the mechanics in interesting ways.
+                    
+                </div>
+                
+            </div>
+            
+            <h2 style="text-align: center">Map of Intended Path</h2>
+            <img src="Images/Portfolio/Magnesis/Fig1-14.PNG" width="600px" class="center">
+            
+            <h2 style="text-align: center">Map of Attraction</h2>
+            <img src="Images/Portfolio/Magnesis/Fig1-15.PNG" width="600px" class="center">
+            
+            <h2 style="text-align: center">Development and Prototypes</h2>
+            
+            <h3>Level Version 1</h3>
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-16.PNG" width="350px" >
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    This is the first sketch of the original version of this level. At this point in development the mechanics of Magnesis were already set in stone and exploration on movement techniques, mechanics, and puzzles have already begun. The idea of having four puzzle rooms that the player must complete in any order came to be early on, and in the sketch and final picture showed that the mechanics on display ended up in the final version of the map. However, the main hub area that connects all the rooms together felt empty and didn't provide much enrichment other than just being a crossroads. People also pointed out that there wasn't a good sense of direction, and while the level is designed to let players explore at their freedom, there was a sense of hesitation in the way the level was currently laid out. There were some aspects of the challenge rooms that were hard to understand, like how in one of the rooms is a secret passage way to the next room that is required to find in order to progress. On top of that the way inside said secret passage way felt awkward and claustrophobic, so that idea was scrapped in the later revision.
+                    
+                </div>
+                
+            </div>
+            
+            <img src="Images/Portfolio/Magnesis/Fig1-17.PNG" width="700px" class="center"><br><br>
+            
+            <h3>Level Version 2</h3>
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    This version would become the current version of what the level is. With the main hub area being a big issue with the level, the whole idea of it being a hall was scrapped and experimentation began with a simple circular room to help convey the idea that no one room felt more important than the other, and to give it more space. The idea of having different challenge halls still stuck around in this version, but the final fourth hall would become a final challenge of sorts that combined all the mechanics learned. Yet with this came the question of how do you prevent players from easily going in the more challenging areas without proving they know how to tackle it to some degree? <br>
+                    Experimentation began with having objects in the main hub that could be arranged in ways that would allow the player to access door ways into the challenge rooms. The idea was that after going into a challenge room, learning the mechanics, and returning, the player would see the objects in a new way that would lead them to a solution to get to the next room. This however made the room feel cramped and cluttered in concept, so in the second version of the hub, the idea of having branching halls that lead to the challenge rooms was implemented. <br>
+                    These halls helped give proper area for these entrance challenges and gave the room a whole new personality. Like stated earlier, the main inspiration for this new hub was Christopher Alexanders principle of Good Shape and the natural formation of leaves in nature. With this I modeled the final version of the hub shown below.
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-18.PNG" width="350px" >
+                    
+                </div>
+                
+            </div>
+            <img src="Images/Portfolio/Magnesis/Fig1-19.PNG" width="700px" class="center"> <br><br>
+            
+            <div class="row">
+                
+                <div class="columnHalf">
+                    
+                    <h3>Puzzle Exploration</h3>
+                    These are a few examples of how I brain stormed some of the puzzles and how could the mechanics and level elements could be combined to overcome obstacles in the level. While some of these sketches are very basic and most didn't end up in the current level, they have still been a great source of inspiration and knowledge. I feel like with how wide the possibilities are with the use of the games main mechanic can be, it is good to think of as many different ways the player can use it, even in very simple ways. Experimenting lead me to thinking of some out of the box ways that these puzzles can be over come and even led to new ones, which leads to a much more expressive gameplay experience.
+                    
+                </div>
+                <div class="columnHalf">
+                    
+                    <img src="Images/Portfolio/Magnesis/Fig1-20.PNG" width="350px" >
+                    <img src="Images/Portfolio/Magnesis/Fig1-21.PNG" width="350px" >
+                    
+                </div>
+                
+            </div>
+            
+            <h2>Analysis and Reflection</h2>
+            I am pretty happy with the progress I have made on this level, but I feel like there is still much to refine about the over all design and how the level layout intertwines with the mechanics. This is designed to be the first level in a game based around this idea of attracting and moving you and objects in your surroundings, and I feel like I have done a good job of presenting these mechanics in a way that a player can learn how the game world works and what you as a player are capable of. In the future when the scope of the rest of the game comes into better scope I would most likely take another few passes on this level, possibly narrowing down the number of mechanics featured and experimenting with a few in a broader and more complex way. Over all I feel like I have learnt a lot on how to design a level around a mechanic, how to brain storm idea, and iterate on previous versions to create a stronger design later on. I also am very appreciative of my peers who helped give input and analyze my level with valuable feed back that helped shape my course and discover the potentials of this level and game as a whole.
+            
+        </div>
+        <br>
+        <div id="footer">
+            
+            <p style="text-align: center">
+                        
+                        <a href="index.html">Home</a> | <a href="games.html">Games</a> | <a href="portolioMain.html">Portfolio</a> | <a href="#top">Top of Page</a>
+                        
+                    </p>
+            
+            <div style="margin-left: 150px">
+                <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+                <a href="https://bsky.app/profile/sonki-boy.bsky.social"><img src="Gifs/Buttons/BlueskyButton.gif"></a>
+                <a href="https://sonki-boy.itch.io/"><img src="Gifs/Buttons/itchButton.png"></a>
+                <a href="https://www.youtube.com/@Sonki"><img src="Gifs/Buttons/YoutubeButton.png"></a>
+                <a href="https://github.com/sonkiboy"><img src="Gifs/Buttons/GithubButton.png"></a>
+            </div>
+            
+            
+            
+            <p style="text-align: center">
+            
+             © 2025 Harrison Kratz. All rights reserved.
+                
+            </p>
+            
+        </div>
+        
+    </body>
+
+</html>
