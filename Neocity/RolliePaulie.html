@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  
+  <style>
+      html{
+          background-image:url("Images/Background.png");
+          font-family: Ms Gothic;
+          color: white;
+            
+      }
+      
+      a{
+        color: #d4b11d;
+    }
+      
+      #mainContainer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 2450px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+      }
+      
+      #footer{
+          border: #d4b11d 4px ;
+          border-style: inset;
+          height: 110px;
+          width: 775px;
+          margin: auto;
+          padding: 15px;
+          background-image: url(Images/black.png);
+          
+          
+          
+      }
+      
+      .columnHalf {
+            float: left;
+            width: 40%;
+            padding: 10px;
+          
+      }
+      
+      .columnThird{
+          float: left;
+          width:30%;
+          padding: 12px;
+      }
+      
+
+      /* Clear floats after the columns */
+      .row:after {
+            content: "";
+            display: table;
+            clear: both;
+      }
+      
+      
+  
+  
+  
+  </style>
+    
+    <body>
+
+        <div id="mainContainer">
+            
+            <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+            
+            
+            
+            <p>
+                
+                
+                <a href="index.html"><img src="Images/HomeButton.png"></a>
+                <a href="games.html"><img src="Images/GamesButton.png"></a>
+                <a href="portolioMain.html"><img src="Images/PortfolioButton.png"></a>
+     
+            </p>
+            
+            <h1 style="text-align: center">Game Prototype: Rollie Paulie</h1>
+            <p style="text-align: center">
+                Made as my final project for Advanced Game Engine Scripting at Columbia College Chicago, is a Momentum Based 3D platformer made within Unity 6. This prototype was made over the course of a semester to showcase some of the main teaching points of the class.
+            </p>
+            
+            <div class="row">
+            
+                <div class="columnHalf">
+                
+                    <h2>Summary </h2>
+
+                    The game is a 3rd person, 3D puzzle platformer focused on using speed and momentum to ascend ramps and clear jumps. You play as a pill bug who can roll up into a ball to roll round and quickly gain speed. In addition, when in mid-air you can shoot straight down very quickly, and when paired with ramps and slopes can get a lot of speed very quickly. <br>
+                    <br>
+                    While most platformers have a basic jump or some equivalent action to gain height, this game will require the player to use elements in the environment in combination with their speed centric abilities to gain height. For example, if the player wants to get on top of a half pipe structure, they will have to roll back and forth between the slopes to gain enough momentum to scale the ramp. 
+                    
+                    <h2>Original Concept</h2>
+
+                    This idea first came from this prototype for a fast-paced FPS platformer I made the Summer prior inspired by games like Neon White and I Am Your Beast. The main concept was that the player had a projectile they could shoot out that the player could explode on demand, letting them do things like rocket jump or boost themself forward. The player could also perform a dive move in the air that would halt all horizontal movement, and allowed them to gain high speeds when they dive onto a slopped surface.<br>
+                
+                </div><div class="columnHalf">
+                
+                    
+                <br>
+                    While I liked some elements of the idea, I found the mechanics didn't mesh well with the Fps mechanics in a very satisfying way. Going up these ramps just led to the player staring at the wall, making blind guesses to how far their jumps will go, and jerking their camera around to reposition themself. While there might still be a way to apply this to a first person persepctive, I went to see if I could apply some of these mechanics to a 3rd person view.
+                
+                    <h2>Prototype Video</h2>
+                    <i>(No Audio)</i>
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/FIbqukM5MLE?si=_gMDe4SVJVtWEXeq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                </div>
+            
+            </div>
+            
+            <h2>The Movement</h2>
+            When transitioning from thr 1st person format to the 3rd person format was figuring out how the camera will look at the enviornment and their character. I thought about going for something like most 3D Mario games where the player can orientate the camera in full 3D space, but seeing the Spherical player in the grid like graybox enviornment, I was reminded of two games; Marble Madness, and Kirby's Dream Course. <br>
+            <br>
+            These two games have a very distinct Isometric style, where you control these small balls in condensed Puzzle Box style levels. I thought this would be a great refrence point when approaching the movement and overall gameplay of the prototype. 
+            <br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Omd3365-InM?si=hz5sSSjW7fZ7Tng6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+            <br>
+            I managed to adapt the isometric camera style into the platformer setting, with the added addition of letting the player rotate the camera 360 degrees around the player, to aid in depth perception. The movement is similar to the demo with the very high top speed, the doward spike move, however I removed the explosive projectile as I felt like it no longer fit with the 3rd person camera.<br>
+            <br>
+            All the physics interactions are using the base Unity physics simulations, with intigration of the New Input system and Cinemachine to drive the player input readings and camera control.<br>
+            <br>
+            
+            <h2>The Level</h2>
+            I already began incorperating some basic level elements like ramps and half pipes as ways to experiment with the physics based movement. There were some issues when it came to surface edges and colliding surfaces but I was able to tweak the interpolation of the player to get more consistent results while prototyping.<br>
+            <br>
+            Overall navigating around the level with just the ramps and slopes was already satysfying. Adding a drop shadow beneith the player helped combat a lot of the platforming issues that came with the isometric camera, and the doward spike became a very versatile tool when both trying to gain speed but also stop on a dime. So at this point I started looking into other level elements the player can interact with.<br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u5uvgyHg3BA?si=b-zY2CCqwb0KLCkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <br>
+            I had already been experimenting with this in the prior video with the dash pads and moving platforms, which came from more traditional platformers like how they appear in the 2D Sonic games. However I wanted something that was a bit of a hazard and embrace the chaotic nature of the games movement so far. Taking inspiration from pinball, I added these pink bumpers that will launch the player up if they jump on it, or bounce them away when hit from the side. <br>
+            <br>
+            To also help better show case how the player is intended to use, I added these small coin collectables to create paths that teach the player how move around, and also draw their attention to certain areas and prompt them to attempt to reach them.<br>
+            <br>
+            
+            
+            
+        </div>
+        
+        <br>
+        <div id="footer">
+            
+            <p style="text-align: center">
+                        
+                        <a href="index.html">Home</a> | <a href="games.html">Games</a> | <a href="portolioMain.html">Portfolio</a> | <a href="#top">Top of Page</a>
+                        
+                    </p>
+            
+            <div style="margin-left: 150px">
+                <a href="index.html"><img src="Gifs/Buttons/SonkButton.gif"></a>
+                <a href="https://bsky.app/profile/sonki-boy.bsky.social"><img src="Gifs/Buttons/BlueskyButton.gif"></a>
+                <a href="https://sonki-boy.itch.io/"><img src="Gifs/Buttons/itchButton.png"></a>
+                <a href="https://www.youtube.com/@Sonki"><img src="Gifs/Buttons/YoutubeButton.png"></a>
+                <a href="https://github.com/sonkiboy"><img src="Gifs/Buttons/GithubButton.png"></a>
+            </div>
+            
+            
+            
+            <p style="text-align: center">
+            
+             © 2025 Harrison Kratz. All rights reserved.
+                
+            </p>
+            
+        </div>
+        
+  </body>
+<html>
