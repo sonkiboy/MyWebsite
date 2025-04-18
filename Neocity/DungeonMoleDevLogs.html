@@ -17,7 +17,7 @@
       #mainContainer{
           border: #d4b11d 4px ;
           border-style: inset;
-          height: 10000px;
+          height: 20000px;
           width: 775px;
           margin: auto;
           padding: 15px;
@@ -462,7 +462,356 @@
             </div>
             
             
+            <!-- Week 16 -->
+            <h2>Week 16 pt. 1: Create Art + SFX Asset lists for Milestone 4</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    With the increased number of people involved in this project, and looking back on last semester, I want to start this stage of development by getting some defined lists of what needs to be done so I can make sure there is a steady line up of thigs to do. In the ladder half of last semester I got really caught up in the design of the game that I didn't have much time to get things for artists to do. Now that we have more designers and programmers interested in working on the game, and with the extra time, I want to focus more on honing my producer skills and making sure that we have a good plan for each milestone and can ship something in May.<br>
+ <br>
+                    For the art asset list, I want to have this all within its own spreadsheet to keep it all centralized for that team, and also since the artists aren't working in GitHub until near the end of the assets creation. However this will not replace GitHub Issues. From my experience from the last few semesters in studio, the GitHub issues are a good way to track what people are actively doing on a week to week basis. This asset spread sheet would be more so for planning out long term production, having something that people can pull from and then bring into GitHub as we reach each milestone. I did some research to figure out a good format, and found a good example from <a href="https://www.artstation.com/blogs/joshuabresler/aaba/adapting-to-and-combining-multiple-art-styles-in-3d-part-1">Joshua Bresler</a> on Art Station that seems to fit the timeline of the class structure that I will be referencing.<br>
+ <br>
+                    For the Sound Effects list, I did speak with Dani about how that will be formatted, since they have already started production so I will be in communications with them about how to format it.<br>
+ <br>
+                    Right now I want to focus on the goals for Milestone 4, which I feel should be focused on honing in our aesthetic styles. Safe bet would be just have the demo but with refined art assets, no grey boxing, models for plants, and some core sound effects, but I would like to still showcase some new gameplay features or levels if we can get them done in time. <br>
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    <!-- put image here -->
+                    
+                    Heres the link to the spreadsheet with the asset lists for 3D Models, VFX/Shaders/Particles, and Sound:<a href="https://docs.google.com/spreadsheets/d/1mCBq_d1GhMAZLw7f1L9LoWf1Na8oS_TiZ3pl6rO3770/edit?gid=0#gid=0">https://docs.google.com/spreadsheets</a> *Note this document has since been updated*<br>
+                    <br>
+                    This is most of what I want to see for the first milestone, starting to showcase the visual style of the game in the scope of the last demo. I'm going to speak with the artists on how to best plan this out and if there are any other assets we need to add. I'll be continuously updating this doc through out the semester, but this will be the only post I make for it. 
+                </div>
+                
+            </div>
             
+            <!-- Week 16 2-->
+            <h2>Week 16 pt. 2: Rework Wall Plant</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    So for a while I have noticed that the wall plant hasn't been really been adding much to the gameplay. The controls are kinda awkward, the use for it isn't obvious, and there are a lot of technical challenges with it. I got really caught up in the idea of having them grow and wiggle around like actual roots and vines, but it is too slow and doesn't combo with any of the other plants. I also had this issue with the sling shot plant, but decided to just scrap it since I felt its mechanics over complicated its use. However I do feel like we need a wall that the player can set up to defend them self, and also manipulate the battle field in a way to attack the enemy. <br>
+ <br>
+Over the break was thinking a lot about peoples reactions to the bouncing projectiles, and the puzzles that formed from that. All of those puzzles used diagonal walls naturally found in the level, but I realized that the player should have some way to set up diagonal walls to create their own projectile paths around obstacles. However the main issue with this idea was how do you set up a diagonal line in a square grid? I had ideas for dedicated plants that took up one tile but had a diagonal edge, but felt like that would be hard to effectively hit and set up. But then I came back to the idea of the sling shot plant and came up with this idea:<br>
+                    <br>
+                    <!-- image here-->
+                    <br>
+                    The main idea is that it takes the aiming concept of the sling shot and lets the player grow the wall out in the direction in one go. This idea would theoretically be quicker, and easier to learn than the original wall growth pattern. However unlike the sling shot aiming, I want this to be restricted to 8 directions as this will make it really easy to set up projectile bounce paths and make it easier to predict what tiles will be considered "open" to planting. Since I want each end of the wall to land on the center of a tile, the length will vary between diagonals and cardnal directions, but I want to try and aim for the wall to jut out ~3 tiles from the main body.<br>
+                    <br>
+I also had the idea of having the growth animation also deal damage to enemies that are in the way, creating kind of a pseudo melee attack, giving the wall this duality both as a defense plant and an offensive one in a pinch. I also want to create a aim reticle for this similar to the line renderer but not as long
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    I got the prototype for the new root wall mechanics that I am currently dubbing The Root Spike (not sold). I don't have the UI inputs working for it yet but it works similar to the sling shot where Clay goes behind it to aim, but I took away the inverted stick control thing so the aim arrow lines up with the stick direction. I also added in the damage aspect to the spike so when the wall grows out it deals damage to enemies in the path so the player can have a sort of melee attack thats good with groups of enemies up close. But even aside from that I can see a lot of fun puzzles and levels comprising of just this and the shooter plant so I feel pretty good about these changes<br>
+                    
+                    <!-- video here -->
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 17 1 -->
+            <h2>Week 17 pt.1: Updating the Input Action UI</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    We have found some bugs with the current UI Input overlays and have ideas for some new additions to further help the player understand what is happening:
+                    <ul>
+                    <li>When the player grows a plant the UI doesn't change to the plants control scheme</li>
+<li>Each control scheme is hard coded in and difficult to expand upon for specific scenarios</li>
+<li>A fertilizer tracker that appears above a plant to show how much it needs to grow. This would most likely be a dial like indicator that fills up as it gains fertilizer</li>
+<li>Enemy Spawner Trackers that appears above each active hive on the screen, and when there is an active hive off screen it will stick to the edge of the screen and point in the direction of the spawner</li>
+                    </ul>
+
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Heres a demo video showcasing the UI changes and updates I made this week. Big new additions are the object trackers I have set to the enemy spawners, and the dial trackers over the plants to track how much fertilizer they have. I did forget to mention in the video but the object trackers could be used to track other objects if we want and have a different icon and such, could be useful in the tutorial area to guide  the players attention. Regardless let me know what you guys think or if you have any suggestions<br>
+                    <br>
+                    
+                    Video here
+                    
+                </div>
+                
+            </div>
+            
+            
+            <!-- Week 17 2-->
+            <h2>Week 17 pt. 2: Aiming with the Right Stick</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    Many people have pointed out that the aiming for planting seeds and interacting with objects is a bit hard as you need to line the player to directly face that object with just the move stick. This will allow the player to rotate around like in a twin stick shooter to aim their character<br>
+                    <br>
+                    put video here 
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Quick video showcasing the aiming I added to the player so now planting and selecting stuff is a lot easier! One thing I want to talk to animators about is how we want to go about animating Clay when he's looking one way and moving another since it does look kinda awkward. I tried experimenting with having the animation reverse when he's walking backwards but it kinda looked weird. I wouldn't worry so much about so much how to get it work but do you think we should have the top half of the body separate from the legs or have different animations for the 4 cardinal directions and interpolating between those. Those were just my ideas and we can talk more on Friday but this does look a bit funky<br>
+ <br>
+I also briefly showcased and talked about some updated I made to the fertilizer dial to make it a bit easier on the eyes. TLDR; Going to have the dial fade away when the player is far away and then become full size when they are near.<br>
+                    <br>
+One other small thing to keep in mind is that I did add the timer to the test projectiles so they will be destroyed after about 4 seconds of being in the air since someone mentioned that last week. <br>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 18 1-->
+            <h2>Week 18 pt.1: Enemy Barriers</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week is going to be a bunch of smaller reworks/adding functionality to existing features based on some of the feedback and discussion with the level designers to experiment with <br>
+ <br>
+First up is getting the enemy barriers set up as their own prefab object. So far the barriers have worked by just having them as a child object of the Hives that are destroyed when the Hive dies. However it was pointed out that this limits us to only having one Hive per challenge, and people did have ideas for having multiple hives in a section to create danger from different directions. So I want to go ahead and make it its own object with behavior script to add more flexibility to the gates. I have also been told that the sounds for said gate are made so hopefully after this week we would just need the final model and its good to go<br>
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    The barrier ended up being pretty simple, but allowed the level designers to really start to experiment with mechanical combos and setting up proper challenges<br>
+                    <br>
+                    put video here
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 18 2 -->
+            <h2>Week 18 pt.2: Extra Sources of Fertilizer</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    During our greybox review, one of the most important talking points we had was an issue that has been looming over my head for a while was the issue of running out of Fertilizer. We took some time to discuss some potential solutions and I want to try and prototype some of those ideas to bring into next week and discuss as a group.
+                    <ul>
+                    <li>Enemies and Hive's drop fertilizer on death
+                        <ul>
+                        <li>This felt like a pretty popular idea within the group, however this does have some potential holes. While the enemies can spawn from hives forever, creating a theoretical infinite source of fertilizer, if the player has no defenses then they won't be able to kill the enemies to drop the fertilizer.</li>
+                        </ul>
+                        </li>
+                    <li>Big Fertilizer Deposits Regenerate
+                        <ul>
+                        <li>The idea with this one was that bigger fertilizer deposits, or at least some sort of variant of them can regenerate at a very slow rate. This could be something to pair with the enemy drops to avoid the aforementioned soft-lock situation, however we didn't like the idea of a player sitting next to the fertilizer deposits just waiting for them to regenerate
+                            </li>
+                        
+                        </ul>
+                        
+                        </li>
+                    <li>Smaller Scattered Deposits
+                        <ul>
+                        <li>As a way to add some more details and guide the player to certain areas, it was suggested that we could have some more smaller fertilizer deposits that are more frequent and scattered through the level. This is similar to an idea I have had for small item crates scattered through out the level. Those crates would be kind of an analogue to Zelda pots, where occasionally they spawn a random item when broken. However, I personally don't like the idea of the player having to walk up each small little crystal and pressing B to dig them up, so I want to experiment with another solution. In Enter the Gungeon there are a lot of set dressing props (like crates, pots, chairs, etc.) that the player can run into and break. They don't drop anything, and other than blocking a single bullet they are pretty useless, but it is so fun to just run through them and break them! I had that idea for the item crates in this game and will most likely do the same with these small deposits
+                            </li>
+                        
+                        </ul>
+                        
+                        </li>
+                    
+                    </ul>
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Heres a video talking about some of the ideas I implemented that could be potential solutions to the fertilizer problem based on what we discussed last week. I'm a bit rambley so sorry for the tangents about plans for the next few weeks, but I do plan on making a new pass on the pickup items in the coming weeks. Main additions this week are the Small fertilizer deposits, Deposit Regeneration, and dropping fertilizer on object destroy. Small Fertilizer deposits can be quickly ran into to break and gain a small amount of fertilizer, and can be placed around the map to have a smaller passive source of fertilizer. Deposits can now have the option to regenerate at a specified rate, creating time for resources system. And new component has been added which will drop an amount of fertilizer within a range of values when that object has been destroyed. This is used on both the enemies and the hives in the test scene, but can be used on any object that has a collider.<br>
+                    <br>
+                    video here
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 19 1-->
+            <h2>Week 19 pt,1: Trailer for New Release and Itch Updates</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    So the big thing this week will be getting things set up for the Milestone patch release next week. This will involve updating the main page with a new trailer going over the big changes/improvements in this update. I'll also be making a itch page documenting changes more thoroughly. 
+ <br>
+Here are the Main features for this milestone:
+                    <ul>
+                    <li>Sound implementation</li>
+                        <li>New levels focused on different mechanics</li>
+                        <li>New models for the enemy spawners (H.I.V.E.s) and item drops </li>
+                        <li>Refined Item drop animations and spawning </li>
+                        <li>UI improvements</li>
+                    </ul>
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    video trailer<br>
+                    
+                    <br>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 19 2-->
+            <h2>Week 19 pt.2: Improve Visual Effects for Item/Resource Flow</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    For the next demo, I want to rework some issues I have been seeing in regards to understanding the flow of resources as the player makes actions. While this was tackled a while ago with adding the pickup visuals and UI animations, there are some new features and changes that I want to fix:<br>
+                    <br>
+                    Item Drop Animation + Delay<br>
+One thing I mentioned last week was wanting to improve the way the Item Drops behave in game. Currently their objects just spawn in at a position, and instantaneously disappear when near the player. From the start I wanted the drops to have more personality and animated, but when first implemented I was more concerned about making sure everything was working before the aesthetics, but this led to some confusion on where drops are coming from and where they are going. Main things I want to do is have the items be thrown out from their spawned position so they spawn with some movement, and also add a delay to the player picking it up from when it spawned, so the player can see the item drop before it is collected<br>
+                    <br>
+                    Fertilizer Use<br>
+                    When the player is fertilizing a plant, I want there to be a visual line of fertilizer arch from the player, to the target plant. This will communicate not only the direction of fertilizer flow, but also the rate. Rendering the line in an arch might be a challenge but I am sure it is capable within Unity using line renderers.<br>
+                    <br>
+                    Grid Visualization<br>
+                    While not necessarily a resource, I feel like better visualizing the world grid plays a part in this, since it's information that will help the player more efficiently use their resources. Up until now we have been using the Probuilder grids to visualize the world grid and calculate how things line up in gameplay, however probuilder textures aren't going to be making it to the final game, so I feel like it is time to figure out a good way of rendering that to the player in a way that isn't overwhelming or noisy. Could probably figure something out with shaders to make it only appear when the player is close.
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Heres a video showcasing some of the visual changes I added. Really happy with the grid shader and the fertilizer arch, since I felt those where things we really didn't communicate well so having this in the game makes me feel a lot more comfortable.<br>
+                    <br>
+                    video
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 20 1-->
+            <h2>Week 20 pt.1: Start Transitioning to Cell Shade Rendering for First Lighting Pass</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    Now entering this next stretch of development, and with some models starting to get textured, I want to begin to transition our default rendering to the cell shaded style that is already present within some of our models. However the fast majority of our game so far utilizes the default URP set up, and does not reflect the final product that we have in mind. So the main goal for this week is to set up a lighting reference scene (most likely based on the tutorial scene) that better reflects the rendering style, with a basic first pass on lighting to get a better idea of what direction we should be going with the aesthetics.<br>
+                    <br>
+                    video here
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    First pass on lighting with the Toon/Cell shading plug in we have! It's been a little funky to use and definitely needs some work to make sure things are balanced, mainly I think adding volume to light. From my research there isn't anything built into unity/URP that can do volumetric lighting so either I'll have to learn to program that shader, or find a plug in. I am more inclined to do the latter for times sake, but still need time to look into options. <br>
+For now though this first pass was really interesting and switching everything over to toon shaders wasn't as hard as I thought. We do have some weird discrepancies going on, mainly having a Toon shader - Copy that some of the materials derive from which messed up their shading. That was the case with clays model, so after switching it over he looks a bit different, with flatter shading and an outline. Also small change, clays glasses have an unlit shader attached to them so they will glow in the dark!<br>
+One other think I should mention is that I turned on the pixel camera again, I believe it has been off for the past few mile stones, and for the time being it is going to be at HD resolution (1920p x 1080p) so we get some nice crisp edges on the pixels rather than anti aliasing blurring them together, more so an aesthetic touch.
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 20 2-->
+            <h2>Week 20 pt.2: See Player Through Walls</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    Making the grid renderer the other week combined with the playtest notes I got, have me invigorated to finally make a renderer system that will allow the player to see clay when there is a wall between them. I have debated between having this be a silhouette as to preserve the detail of the wall and make it a bit more "secretive" in nature by hiding the other contents, or a full cut out that literally cuts a hole in the wall to show what's on the other side. I went with the latter as I feel it is needed to show the whole level, when the gameplay revolves around placing things in your environment. 
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Heres a video demoing the cut out shader working and how to set it up. It has some quirks that I talk on in the video that I have found in my testing, mainly aesthetic stuff like fading in vs the zoom transition. I'll be tweeking that stuff to better fine tune it but all in all the functionality is there and should be easy to implement into the final textures and models when we get those made<br>
+                    <br>
+                    video
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Week 21 1-->
+            <h2>Week 21: Half Way Point Reflection</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    Working to replicate the lighting as seen in the paint overs Evelyn made so we can flesh out the lighting system and nail in the style we are going for.<br>
+                    <br>
+                    paint overs here<br>
+                    Credit to Evelyn Rodriguez
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    image<br>
+                    <br>
+                    Here is the first version of the lighting I got set up to mimic the paint over. Leaning a bit darker just because I worry if it gets too bright people wont pick up on the cave vibe. However I feel like the crystals on the walls help outline the boundaries of the rooms so I think it can work. Had to fake some of the emission stuff by upping the bloom in post processing, and adding a light inside the crystals to get it to glow on the toon shaders. Also the spot lights now have volume but that is also a trick of just using a mesh. Definitely a simple and kind of hacky work around, but for the sake of time and lack of resources this will be the best strategy <br>
+                    <br>
+                    image<br>
+                    <br>
+                    Quick new pass, upped the fill lighting, made the volumes of the sky lights cylinders over cones to prevent them from looking like stage lights. Made the crystals smaller, worry that if we made them too small and bunch them together the overlapping lights will make it too bright so maybe we go for having larger ranged lights that cover multiple crystals?
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            <!-- Week 22 1 -->
+            <h2>Week 22 pt.1: Half Way Point Reflection</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    This week I'm going to be working on adding the withering mechanic to the plants. We have thrown around the idea for a while but feel ready to commit to it. Basically plants will lose fertilizer charge over time once they are grown, and when it runs out it will enter into its withered state. For now this will just be a general model that it will change too, but once we get closer with texturing the plants and animating them, we can probably have it be its own animation state that changes its color to a dried plant<br>
+                    <br>
+ 
+The rate and causation for losing fertilizer charge will be different depending on the plant. For example, the shooter will lose fertilizer at a constant rate over time, but the root wall should only lose it when an enemy runs into the wall and dies. This will most likely be implemented within the parent class for all plants, so this will be forwards compatible with future plants
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    The plant withering mechanic is implemented and live! Really interested to see how this pans out in the playtesting, but its something I've thought about for a while and I think it turned out well!<br>
+                    <br>
+                    video
+                    
+                </div>
+                
+            </div>
+            <!-- Week 22 2 -->
+            <h2>Week 22 pt.2: Add Hostility Bar</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    
+                    With some of the changes with fertilizer made this week, I want to prototype out the enemy hostility bar that represents the amount of fertilizer the enemy insects have stolen from the main fertilizer deposit. Nick is going to be prototyping the movement and stealing mechanic, while I add the basic UI overlay functionality and game over sequence. To give an idea of how it will look, I included a picture of the "Impatience Bar" from Against the Storm. This bar charges over time and slowly approaches the skull, but rather than over time it is tied to the enemy insects stealing the fertilizer and then putting it into the Hive machines. I will probably have a +1 fertilizer icon popup over the bar when the enemy returns a piece to the drill, much like what appears over Clay when he picks up an item. My main worry at this stage is how to teach the player this is bad other than trial and error. I think that overlay may help and using basic iconography, but I do worry if we might need tutorial blurbs at some point to effectively teach the player this mechanic. For now this will use place holder art that I can get my hands on, and then pass it to Evelyn to make it pretty<br>
+                    <br>
+                    image
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    
+                    
+                </div>
+                
+            </div>
+            <!-- Week 22 3 -->
+            <h2>Week 22 pt.3: Add in Animations to Hive</h2>
+            <div class="row" >
+                
+                <div class="columnHalf">
+                    Going to work on getting the animations that Larry made for the Hives working in synch with the behavior script. Previously this was just a simple animation clip that raised the model for testing sake, so these will be the finalized animations.<br>
+                    <br>
+                    video
+                    
+                    
+                </div>
+                
+                <div class="columnHalf">
+                    Got the animations hooked up, for the most part everything looks great! There were only two things I had of note to talk to Velazquez, Larry about that I touch on the video. First is a slight change to the drill up animation, at the very end when the wasp rail pops up, the wasp shouldn't pop up with it in order to better match the spawn system. The claw on the rail should still pop up, just empty handed. Second is a texture for the hole model that will make it look like a hole. At first I thought maybe just black, but I remember you showing me that shader that created fake 3d space so maybe we can apply that here? Lmk how things look and if anything is off (I'm moving the tracker so its out of the way too)<br>
+                    I tweaked the scripting to better line up with the animations and give a better view on the animations. I linked the first spawn to the drill up animation, however I don't have the spawn animation looping like you said. It could in theory, but the issue I had was what if we need to change the spawn rate away from one ever 2 seconds, or how does it stop when it reaches the spawn limit? Basically I just added a state where it is just the claw empty in a static state, and then when an enemy spawn request is made it goes down and grabs it. I'll probably come back to this at a later time to figure out a way to have the enemies "jump" off the top of the drill and onto the ground. Don't have time for it now since that would involve playing around with the physics and navmesh systems
+                    
+                </div>
+                
+            </div>
             
             
         </div>
